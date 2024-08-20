@@ -1,20 +1,22 @@
 
-# Developer Kickstart Module 1: Variables, Data Types, and Operators in Apex
+# Salesforce Developer 101: Intro To Apex Variables, Data Types, and Operators
 
-This repository is part of the Developer Kickstart Module 1 curriculum at Cloud Code Academy. It's designed to help beginner Salesforce developers learn and practice using variables, data types, and operators in the Apex programming language.
+This repository is part of the Salesforce Developer 101 curriculum at Cloud Code Academy. It's designed to help beginner Salesforce developers learn and practice using variables, data types, and operators in the Apex programming language.
 
 ## Goals of the Practice
 
 Through this practice repository, you'll gain foundational knowledge about:
 
-- Different data types in Apex, such as Integer, Decimal, Double, String, Boolean, and more.
-- How to declare and use variables in Apex.
-- How to use various operators in Apex, including arithmetic, comparison, and logical operators.
+- Basic arithmetic operations such as addition, subtraction, multiplication, and division.
+- How to define and manipulate variables using different data types including Integer, Decimal, String, and Boolean.
+- The importance of return types and how to use them in methods.
+- String operations including concatenation and how to return a string value.
+- Conditional logic with if-else statements to control the flow of your programs.
 
 This foundational knowledge will prepare you for more advanced topics in Salesforce development.
 
 ## Setup
-[Setup Overview](https://learn.cloudcodeacademy.com/courses/salesforce-developer-kickstart-program/lectures/47317682)
+[Setup Overview](https://learn.cloudcodeacademy.com/courses/salesforce-developer-101/lectures/56156814)
 
 ## Setup Checklist
 1. Create/Configure a trailhead playground or developer org to do your work throughout this program.
