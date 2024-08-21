@@ -1,29 +1,80 @@
 /**
- * This class contains unit tests for validating the behavior of Apex classes
- * and triggers.
- *
- * Unit tests are class methods that verify whether a particular piece
- * of code is working properly. Unit test methods take no arguments,
- * commit no data to the database, and are flagged with the testMethod
- * keyword in the method definition.
- *
- * All test methods in an org are executed whenever Apex code is deployed
- * to a production org to confirm correctness, ensure code
- * coverage, and prevent regressions. All Apex classes are
- * required to have at least 75% code coverage in order to be deployed
- * to a production org. In addition, all triggers must have some code coverage.
- * 
- * The @isTest class annotation indicates this class only contains test
- * methods. Classes defined with the @isTest annotation do not count against
- * the org size limit for all Apex scripts.
- *
- * See the Apex Language Reference for more information about Testing and Code Coverage.
- */
+* The IntroToApexTest class is used to test the methods in the IntroToApex class.
+* It contains individual test methods for each method in the class, validating their functionality and expected outcomes.
+* The test methods utilize the Salesforce Assert class to assert and validate the results.
+* The main purpose of this test class is to ensure the accuracy and correctness of the methods in the IntroToApex class.
+*/
 @isTest
 private class IntroToApexTest {
 
-    @isTest
-    static void myUnitTest() {
-        // TO DO: implement unit test
+    @IsTest
+    static void testAddition() {
+        Integer result = IntroToApex.addition();
+        Assert.areEqual(10, result, 'Incorrect addition. Expected result is 10.');
+    }
+
+    @IsTest
+    static void testSubtraction() {
+        Integer result = IntroToApex.subtraction();
+        Assert.areEqual(5, result, 'Incorrect subtraction result');
+    }
+
+    @IsTest
+    static void testMultiplication() {
+        Integer result = IntroToApex.multiplication(5);
+        Assert.areEqual(10, result, 'Incorrect multiplication result');
+
+        result = IntroToApex.multiplication(-5);
+        Assert.areEqual(-10, result, 'Incorrect negative multiplication result');
+
+        result = IntroToApex.multiplication(0);
+        Assert.areEqual(0, result, 'Incorrect multiplication by zero result');
+
+        result = IntroToApex.multiplication(10);
+        Assert.areEqual(20, result, 'Incorrect multiplication result');
+    }
+
+    @IsTest
+    static void testDivision() {
+        Decimal result = IntroToApex.division(10, 5);
+        Assert.areEqual(2, result, 'Incorrect division result');
+
+
+        result = IntroToApex.division(8, 2);
+        Assert.areEqual(4, result, 'Incorrect division result');
+
+        result = IntroToApex.division(0, 5);
+        Assert.areEqual(0, result, 'Incorrect division by zero result');
+    }
+
+    @IsTest
+    static void testMyName() {
+        String result = IntroToApex.myName();
+
+        Boolean isNotEmpty = String.isNotBlank(result);
+        Assert.isTrue(isNotEmpty, 'myName method should return a non-empty String');
+    }
+
+    @IsTest
+    static void testConcatenateStrings() {
+        String result = IntroToApex.concatenateStrings('Hello', 'World');
+        Assert.areEqual('HelloWorld', result, 'Incorrect concatenateStrings result');
+        result = IntroToApex.concatenateStrings('Hello', 'Cloud');
+        Assert.areEqual('HelloCloud', result, 'Incorrect concatenateStrings result');
+    }
+
+    @IsTest
+    static void testIsNegative() {
+        Boolean result = IntroToApex.isNegative(10);
+        Assert.areEqual(false, result, 'Incorrect isPositive result');
+
+        result = IntroToApex.isNegative(-10);
+        Assert.areEqual(true, result, 'Incorrect isPositive result');
+    }
+
+    @IsTest
+    static void testCalculateMonthlyPaycheck() {
+        Assert.areEqual(1600.0, IntroToApex.calculateMonthlyPaycheck(40.0, (Double)10.0), 'Incorrect monthly paycheck for 40.0 rate and 10.0 hours');
+        Assert.areEqual(0.0, IntroToApex.calculateMonthlyPaycheck(0.0, (Double)10.0), 'Incorrect monthly paycheck for 0.0 rate and 10.0 hours');
     }
 }

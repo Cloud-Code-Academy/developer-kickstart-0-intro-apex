@@ -38,7 +38,7 @@ public with sharing class IntroToApex {
     /**
      * Question 2
      * Performs subtraction of two numbers.
-     * @return The difference should be 5 currently it is returning it results in an error because of the null values
+     * @return The difference should be 5 currently it is returning the result of 0
      */
     public static Integer subtraction() {
         //0 is a placeholder value, replace it with the correct calculation
@@ -49,7 +49,7 @@ public with sharing class IntroToApex {
 
     /**
      * Question 3
-     * Performs multiplication of two numbers.
+     * Performs multiplication to double the value of the firstNumber.
      * @param firstNumber is an input parameter. It's value will automatically be set/passed in when the method is called.
      * @return The result should be double the value of the firstNumber.
      */
