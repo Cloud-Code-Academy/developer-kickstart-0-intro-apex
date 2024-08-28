@@ -17,7 +17,7 @@
 * By the end of this assignment, you'll have a solid understanding of the basics of Apex and be ready to tackle more complex
 * development challenges within the Salesforce ecosystem.
 * 
-* @author Your Name
+* @author Warren Walters
 */
 
 public with sharing class IntroToApex {
@@ -28,7 +28,7 @@ public with sharing class IntroToApex {
      */
     public static Integer addition() {  
         //Update the values inbetween the code block (curly braces) for the addition() method to pass the tests.
-        Integer result = 2 + 5;
+        Integer result = 5 + 5; //result <- 10 <- 5 + 5
 
         //return statement is required for a method with a return type (Integer). 
         //This will send the result information back to the calling class in this instance the test class.
@@ -42,8 +42,7 @@ public with sharing class IntroToApex {
      */
     public static Integer subtraction() {
         //0 is a placeholder value, replace it with the correct calculation
-        Integer result = 0 - 0;
-
+        Integer result = 10 - 5;
         return result;
     }
 
@@ -55,7 +54,7 @@ public with sharing class IntroToApex {
      */
     public static Integer multiplication(Integer firstNumber) {
         //firstNumber value will be passed in when the method is called so you can use it in your calculation.
-        Integer result =  firstNumber * 0;
+        Integer result =  firstNumber * 2;
         return result;
     }
 
@@ -67,7 +66,8 @@ public with sharing class IntroToApex {
      * @return the result of dividing the first number by the second number.
      */
     public static Decimal division(Integer firstNumber, Integer secondNumber) {
-        return null; // Replace null with the variable you used to store the result
+        Decimal result = firstNumber / secondNumber;
+        return result;
     }
 
     /**
@@ -76,8 +76,8 @@ public with sharing class IntroToApex {
      * @return Your name as a String.
      */
     public static String myName(){
-        String myName = '';
-        return null; // Replace null with the variable you used to store the result
+        String myName = 'Warren Walters';
+        return myName; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -89,8 +89,9 @@ public with sharing class IntroToApex {
      */
     public static String concatenateStrings(String firstText, String secondText) {
         //String concatenation is done using the '+' operator.
+        String combinedString = firstText + secondText;
 
-        return null; // Replace null with the variable you used to store the result
+        return combinedString; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -110,6 +111,13 @@ public with sharing class IntroToApex {
          *   // code block
          * }
          */
+
+        if (num < 0) {
+            result = true;
+        } else {
+            result = false;
+        }
+        
         return result;
     }
 
@@ -124,9 +132,10 @@ public with sharing class IntroToApex {
      */
     public static Decimal calculateMonthlyPaycheck(Decimal hourlyRate, Double numberOfHours) {
         //First calculate the weekly paycheck and store it in a variable.
-
+        Decimal weeklyPay = hourlyRate * numberOfHours;
         //Then calculate the monthly paycheck and store it in a variable.
+        Decimal monthlyPay = weeklyPay * 4;
 
-        return null; // Replace null with the variable you used to store the result
+        return monthlyPay; // Replace null with the variable you used to store the result
     }
 }
