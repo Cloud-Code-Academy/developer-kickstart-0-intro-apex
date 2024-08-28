@@ -45,6 +45,9 @@ private class IntroToApexTest {
 
         result = IntroToApex.division(0, 5);
         Assert.areEqual(0, result, 'Incorrect division by zero result');
+
+        result = IntroToApex.division(3, 2);
+        Assert.areEqual(1.5, result, 'Incorrect division result');
     }
 
     @IsTest
