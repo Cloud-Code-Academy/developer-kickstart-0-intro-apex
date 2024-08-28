@@ -66,7 +66,7 @@ public with sharing class IntroToApex {
      * @param secondNumber is the denominator.
      * @return the result of dividing the first number by the second number.
      */
-    public static Decimal division(Integer firstNumber, Integer secondNumber) {
+    public static Decimal division(Decimal firstNumber, Decimal secondNumber) {
         return null; // Replace null with the variable you used to store the result
     }
 
